@@ -4,6 +4,12 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,600,400italic);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300italic,700);
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic,900,900italic,300italic,300);
+
+$font-base: 'Open Sans', sans-serif;
+
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -15,12 +21,20 @@ $icon-font-path: '../fonts/';
 body {
   padding-top: 20px;
   padding-bottom: 20px;
+  font-family: $font-base;
 }
 .navbar-default {
   background-color: #fff;
   border: 0;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+#navbar {
+  font-family:'Open Sans Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bolder;
+  letter-spacing: .04em;
 }
 
 #logo.navbar-brand {
@@ -38,8 +52,10 @@ body {
 
 // Nav Styles
 .main-nav {
-  background-color: rgba(109, 135, 175, 0.9);
+  background-color: rgba(103, 137, 171, 0.9);
   margin-top: 50px;
+  font-size: 15px;
+  letter-spacing: .03em;
   ul {
     list-style-type: none;
     margin: 0;
@@ -93,10 +109,38 @@ video#bgvid {
 }
 .copy-wrapper {
   float: left;
-  background-color: rgba(109, 135, 175, 0.85);
+  background-color: rgba(103, 137, 171, 0.9);
   width: 430px;
   height: 300px;
+  margin-left: 0;
+  &:before {
+      content: "";
+      display: block;
+      background-color: rgba(139, 203, 199, 0.4);
+      width: 110px;
+      height: 300px;
+      float: left;
+      margin-left: -80px;
+  }
+  &:after {
+      content: "";
+      display: block;
+      background-color: rgba(139, 203, 199, 0.4);
+      width: 180px;
+      height: 300px;
+      margin-left: 415px;
+      margin-top: -264px;
+  }
 }
+// .color-blocks {
+//   background-color: rgba(139, 203, 199, 0.5);
+//   height: 300px;
+//   float: left;
+//   .01 {
+//     width: 120px;
+//   }
+// }
+
 .hero-btns {
   float: right;
   width: 269px;
@@ -105,6 +149,8 @@ video#bgvid {
     background-color: rgb(139, 203, 199);
     color: white;
     text-align: left;
+    font-size: 16px;
+    letter-spacing: .03em;
     padding: 20px;
   }
   .find {
@@ -145,7 +191,7 @@ video#bgvid {
   margin: 0 auto;
   color: white;
   text-align: center;
-  padding: 40px;
+  padding: 30px;
   h1#home {
     font-size: 55px;
     font-weight: 500;
@@ -156,5 +202,9 @@ video#bgvid {
       margin: 35px auto;
       width: 100px;
     }
+  }
+  p {
+    font-family: 'Merriweather', serif;
+    font-style: italic;
   }
 }
